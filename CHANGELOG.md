@@ -1,6 +1,6 @@
 # web-credential-handler ChangeLog
 
-## 0.0.0 - 2018-xx-xx
+## 0.1.0 - 2018-07-27
 
 ### Added
 - Add core files.
