@@ -1,0 +1,27 @@
+{
+  "name": "web-credential-handler",
+  "version": "0.1.0-0",
+  "description": "Credential Handler API util functions for Bedrock Web apps",
+  "main": "index.js",
+  "dependencies": {
+    "credential-handler-polyfill": "^1.0.1",
+    "web-request-rpc": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/web-credential-handler"
+  },
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "http://digitalbazaar.com"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/web-credential-handler/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/web-credential-handler",
+  "bedrock": {
+    "browserDependencies": "all"
+  }
+}
