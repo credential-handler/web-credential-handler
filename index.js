@@ -102,9 +102,9 @@ async function createResponse({event, get, store}) {
     const windowOpen = event.openWindow(result.url);
     const windowReady = appContext.createWindow(result.url, {
       handle: windowOpen,
-      // default to no timeout for loading other window on same site
+      // default to 10 minute timeout for loading other window on same site
       // to allow for authentication pages and similar
-      timeout: 0
+      timeout: 600000
     });
     await windowOpen;
 
