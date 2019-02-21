@@ -1,6 +1,6 @@
 # web-credential-handler ChangeLog
 
-## 0.1.1 - 2019-xx-xx
+## 0.1.1 - 2019-02-21
 
 ### Changed
 - Default to no timeout for loading UI page to handle
