@@ -1,6 +1,6 @@
 # web-credential-handler ChangeLog
 
-## 0.1.2 - 2019-02-xx
+## 0.1.2 - 2019-02-21
 
 ### Changed
 - Default timeout to 10 minutes for loading UI
