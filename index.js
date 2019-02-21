@@ -100,8 +100,12 @@ async function createResponse({event, get, store}) {
     // create WebAppContext to run WebApp and connect to windowClient
     const appContext = new WebAppContext();
     const windowOpen = event.openWindow(result.url);
-    const windowReady = appContext.createWindow(
-      result.url, {handle: windowOpen});
+    const windowReady = appContext.createWindow(result.url, {
+      handle: windowOpen,
+      // default to no timeout for loading other window on same site
+      // to allow for authentication pages and similar
+      timeout: 0
+    });
     await windowOpen;
 
     // create proxy interface for making calls in WebApp
