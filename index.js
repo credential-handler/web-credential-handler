@@ -118,6 +118,7 @@ async function createResponse({event, get, store}) {
     return proxy.send({
       type: event.type,
       credentialRequestOptions: event.credentialRequestOptions,
+      credentialRequestOrigin: event.credentialRequestOrigin,
       credential: event.credential,
       hintKey: event.hintKey
     });

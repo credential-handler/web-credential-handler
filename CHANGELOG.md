@@ -1,5 +1,10 @@
 # web-credential-handler ChangeLog
 
+## 0.1.3 - 2019-04-xx
+
+### Added
+- Include `credentialRequestOrigin` in proxied event.
+
 ## 0.1.2 - 2019-02-21
 
 ### Changed
