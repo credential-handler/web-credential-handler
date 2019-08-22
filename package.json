@@ -23,5 +23,19 @@
   "homepage": "https://github.com/digitalbazaar/web-credential-handler",
   "bedrock": {
     "browserDependencies": "all"
-  }
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.js.map",
+    "index.js",
+    "CredentialEventProxy.js"
+  ]
 }
