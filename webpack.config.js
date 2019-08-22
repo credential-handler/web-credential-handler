@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'production',
   entry: {
     'web-credential-handler': './index.js'
   },
