@@ -12,6 +12,7 @@ export async function installHandler({url}) {
 
   // ensure permission has been granted to add a credential hint
   const result = await CredentialManager.requestPermission();
+  // site asks permission to be a credential handler for the browser
   if(result !== 'granted') {
     throw new Error('Permission denied.');
   }
@@ -38,6 +39,7 @@ export async function uninstallHandler({url}) {
   await CredentialHandlers.unregister(url);
 }
 
+// url for client app to call when storing or getting credentials
 export async function getHandlerRegistration({url}) {
   const CredentialHandlers = navigator.credentialsPolyfill.CredentialHandlers;
 
@@ -51,6 +53,14 @@ export async function getHandlerRegistration({url}) {
   return registration;
 }
 
+/**
+ * Emulates activating a service worker.
+ *
+ * @param mediatorOrigin
+ * @param {function} get
+ * @param {function} store
+ * @returns {Promise}
+ */
 export async function activateHandler({mediatorOrigin, get, store}) {
   if(!(get || store)) {
     throw new Error('"get" or "store" function(s) must be specified.');
