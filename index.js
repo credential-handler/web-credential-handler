@@ -7,6 +7,8 @@
 import {CredentialEventProxy} from './CredentialEventProxy.js';
 import {WebAppContext} from 'web-request-rpc';
 
+const DEFAULT_MEDIATOR = 'https://authn.io';
+
 export async function installHandler({url}) {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
@@ -56,12 +58,12 @@ export async function getHandlerRegistration({url}) {
 /**
  * Emulates activating a service worker.
  *
- * @param mediatorOrigin
+ * @param {string} [mediatorOrigin=DEFAULT_MEDIATOR]
  * @param {function} get
  * @param {function} store
  * @returns {Promise}
  */
-export async function activateHandler({mediatorOrigin, get, store}) {
+export async function activateHandler({mediatorOrigin=DEFAULT_MEDIATOR, get, store}) {
   if(!(get || store)) {
     throw new Error('"get" or "store" function(s) must be specified.');
   }
