@@ -1,5 +1,11 @@
 # web-credential-handler ChangeLog
 
+## 1.0.0 - 2019-08-30
+
+### Added
+- Add Webpack config.
+- Add default mediator origin to `activateHandler()`.
+
 ## 0.1.3 - 2019-04-23
 
 ### Added
