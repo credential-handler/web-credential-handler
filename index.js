@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2018 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2018-2019 Digital Bazaar, Inc. All rights reserved.
  */
 /* global navigator */
 'use strict';
@@ -63,7 +63,9 @@ export async function getHandlerRegistration({url}) {
  * @param {function} store
  * @returns {Promise}
  */
-export async function activateHandler({mediatorOrigin=DEFAULT_MEDIATOR, get, store}) {
+export async function activateHandler({
+  mediatorOrigin = DEFAULT_MEDIATOR, get, store
+}) {
   if(!(get || store)) {
     throw new Error('"get" or "store" function(s) must be specified.');
   }
