@@ -1,5 +1,7 @@
 # web-credential-handler ChangeLog
 
+## 1.0.1 - 2019-10-01
+
 ## Changed
 - Update dependencies.
 
