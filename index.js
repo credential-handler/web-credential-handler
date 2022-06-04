@@ -113,6 +113,7 @@ async function createResponse({event, get, store}) {
   if(result.type === 'redirect') {
     // create WebAppContext to run WebApp and connect to windowClient
     const appContext = new WebAppContext();
+    // change window to 1st party window
     const windowOpen = event.openWindow(result.url);
     const windowReady = appContext.createWindow(result.url, {
       handle: windowOpen,
@@ -130,11 +131,11 @@ async function createResponse({event, get, store}) {
 
     // WebApp running in window is ready; proxy event to it and return response
     return proxy.send({
-      type: event.type,
-      credentialRequestOptions: event.credentialRequestOptions,
-      credentialRequestOrigin: event.credentialRequestOrigin,
-      credential: event.credential,
-      hintKey: event.hintKey
+      type: event.type, // change type to credential handler request type (choose-handler)
+      credentialRequestOptions: event.credentialRequestOptions, // continue to send the cred-req options
+      credentialRequestOrigin: event.credentialRequestOrigin, // continue to send the cred-req origin
+      credential: event.credential, // forward to mediator
+      hintKey: event.hintKey // forward to mediator
     });
   }
 
