@@ -8,7 +8,7 @@ import {CredentialEventProxy} from './CredentialEventProxy.js';
 import {WebAppContext} from 'web-request-rpc';
 
 const DEFAULT_MEDIATOR = 'https://authn.io';
-
+console.log('BOOOOOOOOOOM')
 export async function installHandler({url}) {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
@@ -100,6 +100,7 @@ function listener({event, get, store}) {
 }
 
 async function createResponse({event, get, store}) {
+  console.log("CREATE RESPONSE")
   const result = await (get || store)({event});
   if(!(result && typeof result === 'object')) {
     throw new TypeError(
@@ -114,8 +115,10 @@ async function createResponse({event, get, store}) {
     // create WebAppContext to run WebApp and connect to windowClient
     const appContext = new WebAppContext();
     const windowOpen = event.openWindow(result.url);
+    console.log('set popup true')
     const windowReady = appContext.createWindow(result.url, {
       handle: windowOpen,
+      popup: true,
       // default to 10 minute timeout for loading other window on same site
       // to allow for authentication pages and similar
       timeout: 600000
