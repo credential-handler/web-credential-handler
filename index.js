@@ -114,16 +114,16 @@ async function createResponse({event, get, store}) {
   if(result.type === 'redirect') {
     // create WebAppContext to run WebApp and connect to windowClient
     const appContext = new WebAppContext();
-    const windowOpen = event.openWindow(result.url);
-    console.log('set popup true')
+    const handle = await event.openWindow(result.url);
+
     const windowReady = appContext.createWindow(result.url, {
-      handle: windowOpen,
-      popup: true,
+      handle,
+      popup: false,
       // default to 10 minute timeout for loading other window on same site
       // to allow for authentication pages and similar
       timeout: 600000
     });
-    await windowOpen;
+    // await handle;
 
     // create proxy interface for making calls in WebApp
     const injector = await windowReady;
