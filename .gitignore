@@ -5,6 +5,7 @@
 .settings
 TAGS
 coverage
+dist
 node_modules
 reports
 .cache
