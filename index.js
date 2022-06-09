@@ -8,7 +8,6 @@ import {CredentialEventProxy} from './CredentialEventProxy.js';
 import {WebAppContext} from 'web-request-rpc';
 
 const DEFAULT_MEDIATOR = 'https://authn.io';
-console.log('BOOOOOOOOOOM')
 export async function installHandler({url}) {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
@@ -100,7 +99,6 @@ function listener({event, get, store}) {
 }
 
 async function createResponse({event, get, store}) {
-  console.log("CREATE RESPONSE")
   const result = await (get || store)({event});
   if(!(result && typeof result === 'object')) {
     throw new TypeError(
