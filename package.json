@@ -4,8 +4,8 @@
   "description": "Credential Handler API util functions for Bedrock Web apps",
   "main": "index.js",
   "dependencies": {
-    "credential-handler-polyfill": "^1.0.4",
-    "web-request-rpc": "^1.1.5"
+    "credential-handler-polyfill": "digitalbazaar/credential-handler-polyfill#refactor",
+    "web-request-rpc": "digitalbazaar/web-request-rpc#refactor"
   },
   "repository": {
     "type": "git",
