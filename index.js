@@ -1,9 +1,7 @@
 /*!
- * Copyright (c) 2018-2019 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2018-2022 Digital Bazaar, Inc. All rights reserved.
  */
 /* global navigator */
-'use strict';
-
 import {CredentialEventProxy} from './CredentialEventProxy.js';
 import {WebAppContext} from 'web-request-rpc';
 
@@ -121,7 +119,6 @@ async function createResponse({event, get, store}) {
       // to allow for authentication pages and similar
       timeout: 600000
     });
-    // await handle;
 
     // create proxy interface for making calls in WebApp
     const injector = await windowReady;
