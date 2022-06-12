@@ -6,17 +6,22 @@ import {CredentialEventProxy} from './CredentialEventProxy.js';
 import {WebAppContext} from 'web-request-rpc';
 
 const DEFAULT_MEDIATOR = 'https://authn.io';
+
+// FIXME: remove `url` parameter
 export async function installHandler({url}) {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
   // ensure permission has been granted to add a credential hint
   const result = await CredentialManager.requestPermission();
+  console.log('result', result);
   // site asks permission to be a credential handler for the browser
   if(result !== 'granted') {
     throw new Error('Permission denied.');
   }
 
+  // FIXME: remove now unused function and return `undefined`
   const registration = await getHandlerRegistration({url});
+  console.log('registration', registration);
   if(!registration) {
     throw new Error('Credential handler not registered.');
   }
@@ -24,6 +29,7 @@ export async function installHandler({url}) {
   return registration;
 }
 
+// FIXME: remove now unused function
 export async function uninstallHandler({url}) {
   const CredentialHandlers = navigator.credentialsPolyfill.CredentialHandlers;
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
@@ -38,6 +44,7 @@ export async function uninstallHandler({url}) {
   await CredentialHandlers.unregister(url);
 }
 
+// FIXME: remove now unused function
 // url for client app to call when storing or getting credentials
 export async function getHandlerRegistration({url}) {
   const CredentialHandlers = navigator.credentialsPolyfill.CredentialHandlers;
