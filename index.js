@@ -7,8 +7,7 @@ import {WebAppContext} from 'web-request-rpc';
 
 const DEFAULT_MEDIATOR = 'https://authn.io';
 
-// FIXME: remove `url` parameter
-export async function installHandler({url}) {
+export async function installHandler() {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
   // site asks permission to be a credential handler for the user
@@ -16,44 +15,6 @@ export async function installHandler({url}) {
   if(result !== 'granted') {
     throw new Error('Permission denied.');
   }
-
-  // FIXME: remove now unused function and return `undefined`
-  const registration = await getHandlerRegistration({url});
-  if(!registration) {
-    throw new Error('Credential handler not registered.');
-  }
-
-  return registration;
-}
-
-// FIXME: remove now unused function
-export async function uninstallHandler({url}) {
-  const CredentialHandlers = navigator.credentialsPolyfill.CredentialHandlers;
-  const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
-
-  // ensure permission has been granted to add a credential hint
-  const result = await CredentialManager.requestPermission();
-  if(result !== 'granted') {
-    throw new Error('Permission denied.');
-  }
-
-  // unregister credential handler registration
-  await CredentialHandlers.unregister(url);
-}
-
-// FIXME: remove now unused function
-// url for client app to call when storing or getting credentials
-export async function getHandlerRegistration({url}) {
-  const CredentialHandlers = navigator.credentialsPolyfill.CredentialHandlers;
-
-  let registration;
-  try {
-    // get credential handler registration
-    registration = await CredentialHandlers.register(url);
-  } catch(e) {
-    // ignore
-  }
-  return registration;
 }
 
 /**
