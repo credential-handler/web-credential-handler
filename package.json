@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "credential-handler-polyfill": "digitalbazaar/credential-handler-polyfill#refactor",
-    "web-request-rpc": "digitalbazaar/web-request-rpc#refactor"
+    "web-request-rpc": "^2.0.0"
   },
   "repository": {
     "type": "git",
