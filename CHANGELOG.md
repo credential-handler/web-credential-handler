@@ -1,8 +1,17 @@
 # web-credential-handler ChangeLog
 
+## 2.0.0 - 2022-06-xx
+
+###  Changed
+- **BREAKING**: Remove `url` parameter from `installHandler` API; this
+  now comes from `credential_handler` in `manifest.json`.
+- **BREAKING**: Remove registration APIs; these are no longer needed
+  as handler registration has been simplified to having the user accept
+  permission and having a valid `manifest.json` w/`credential_handler`.
+
 ## 1.0.1 - 2019-10-01
 
-## Changed
+### Changed
 - Update dependencies.
 
 ## 1.0.0 - 2019-08-30
