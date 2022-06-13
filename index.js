@@ -11,17 +11,14 @@ const DEFAULT_MEDIATOR = 'https://authn.io';
 export async function installHandler({url}) {
   const CredentialManager = navigator.credentialsPolyfill.CredentialManager;
 
-  // ensure permission has been granted to add a credential hint
+  // site asks permission to be a credential handler for the user
   const result = await CredentialManager.requestPermission();
-  console.log('result', result);
-  // site asks permission to be a credential handler for the browser
   if(result !== 'granted') {
     throw new Error('Permission denied.');
   }
 
   // FIXME: remove now unused function and return `undefined`
   const registration = await getHandlerRegistration({url});
-  console.log('registration', registration);
   if(!registration) {
     throw new Error('Credential handler not registered.');
   }
