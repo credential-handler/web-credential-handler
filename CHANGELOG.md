@@ -1,6 +1,6 @@
 # web-credential-handler ChangeLog
 
-## 2.0.0 - 2022-06-xx
+## 2.0.0 - 2022-06-13
 
 ###  Changed
 - **BREAKING**: Remove `url` parameter from `installHandler` API; this
