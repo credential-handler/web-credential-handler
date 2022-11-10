@@ -1,8 +1,14 @@
 # web-credential-handler ChangeLog
 
+## 2.0.1 - 2022-11-dd
+
+### Changed
+- Use `web-request-rpc@2.0.1` and `credential-handler-polyfill@3.0.1` to
+  avoid chrome focus bug.
+
 ## 2.0.0 - 2022-06-13
 
-###  Changed
+### Changed
 - **BREAKING**: Remove `url` parameter from `installHandler` API; this
   now comes from `credential_handler` in `manifest.json`.
 - **BREAKING**: Remove registration APIs; these are no longer needed
