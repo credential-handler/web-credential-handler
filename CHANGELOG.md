@@ -1,5 +1,11 @@
 # web-credential-handler ChangeLog
 
+## 2.0.2 - 2022-11-dd
+
+### Changed
+- Use `web-request-rpc@2.0.2` and `credential-handler-polyfill@3.0.2` to
+  avoid chrome mouse event bug.
+
 ## 2.0.1 - 2022-11-09
 
 ### Changed
