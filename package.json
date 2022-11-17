@@ -1,6 +1,6 @@
 {
   "name": "web-credential-handler",
-  "version": "2.0.2",
+  "version": "2.0.3-0",
   "description": "Credential Handler API util functions for Bedrock Web apps",
   "main": "index.js",
   "dependencies": {
