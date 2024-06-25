@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2018-2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2018-2024 Digital Bazaar, Inc. All rights reserved.
  */
 /* global navigator */
 import {CredentialEventProxy} from './CredentialEventProxy.js';
@@ -20,10 +20,13 @@ export async function installHandler() {
 /**
  * Emulates activating a service worker.
  *
- * @param {string} [mediatorOrigin=DEFAULT_MEDIATOR]
- * @param {function} get
- * @param {function} store
- * @returns {Promise}
+ * @param {object} options - The options.
+ * @param {string} [options.mediatorOrigin=DEFAULT_MEDIATOR] - The mediator
+ *   origin.
+ * @param {Function} options.get - The credential request function.
+ * @param {Function} options.store - The credential store function.
+ *
+ * @returns {Promise} Resolves to the active handler.
  */
 export async function activateHandler({
   mediatorOrigin = DEFAULT_MEDIATOR, get, store
