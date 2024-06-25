@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/web-credential-handler"
+    "url": "https://github.com/credential-handler/web-credential-handler"
   },
   "author": {
     "name": "Digital Bazaar, Inc.",
@@ -40,9 +40,9 @@
   },
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/digitalbazaar/web-credential-handler/issues"
+    "url": "https://github.com/credential-handler/web-credential-handler/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/web-credential-handler",
+  "homepage": "https://github.com/credential-handler/web-credential-handler",
   "bedrock": {
     "browserDependencies": "all"
   }
