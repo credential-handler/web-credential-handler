@@ -2,10 +2,13 @@
   "name": "web-credential-handler",
   "version": "2.0.3-0",
   "description": "Credential Handler API util functions for Bedrock Web apps",
-  "main": "index.js",
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
   "files": [
     "dist/*.js",
     "dist/*.js.map",
+    "dist/*.js.LICENSE.txt",
     "index.js",
     "CredentialEventProxy.js"
   ],
@@ -15,13 +18,14 @@
     "lint": "eslint --ext .cjs,.js ."
   },
   "dependencies": {
-    "credential-handler-polyfill": "^3.0.2",
-    "web-request-rpc": "^2.0.2"
+    "credential-handler-polyfill": "^4.0.0",
+    "web-request-rpc": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-digitalbazaar": "^5.2.0",
     "eslint-plugin-jsdoc": "^48.4.0",
+    "eslint-plugin-unicorn": "^54.0.0",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4"
   },

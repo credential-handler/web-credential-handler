@@ -2,8 +2,6 @@
  * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
 /* global window */
-'use strict';
-
 import {WebApp} from 'web-request-rpc';
 
 const PROXY_EVENT_TIMEOUT = 60000;

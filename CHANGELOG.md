@@ -1,5 +1,13 @@
 # web-credential-handler ChangeLog
 
+## 3.0.0 - 2024-xx-xx
+
+### Changed
+- **BREAKING**: Change to module.
+- **BREAKING**: Update dependencies.
+  - `credential-handler-polyfill@4`
+  - `web-request-rpc@3`
+
 ## 2.0.2 - 2022-11-17
 
 ### Changed

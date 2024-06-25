@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   mode: 'production',
   entry: {
     'web-credential-handler': './index.js'
