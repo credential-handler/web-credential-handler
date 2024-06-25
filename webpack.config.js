@@ -1,7 +1,7 @@
 export default {
   mode: 'production',
   entry: {
-    'web-credential-handler': './index.js'
+    'web-credential-handler': './lib/index.js'
   },
   devtool: 'source-map',
   output: {
