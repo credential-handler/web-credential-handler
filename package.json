@@ -3,14 +3,13 @@
   "version": "2.0.3-0",
   "description": "Credential Handler API util functions for Bedrock Web apps",
   "type": "module",
-  "main": "./index.js",
-  "exports": "./index.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "files": [
-    "dist/*.js",
-    "dist/*.js.map",
-    "dist/*.js.LICENSE.txt",
-    "index.js",
-    "CredentialEventProxy.js"
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.js.LICENSE.txt",
+    "lib/**/*.js"
   ],
   "scripts": {
     "prepublish": "npm run build",
